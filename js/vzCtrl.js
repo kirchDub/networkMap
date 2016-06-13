@@ -29,7 +29,7 @@ app.controller('vzCtrl', function($scope, $mdDialog) {
           //div.style.display = 'block';
 	};
 	
-	var DIR = '../graph/img/';
+	var DIR = '../networkMap/img/';
         $scope.nodes.add([
                 {id: 101, x: 580, y: 170},
                 {id: 102, label: '102', image: DIR + 'switchBrown.png', shape: 'image', x: 580, y: 250},
