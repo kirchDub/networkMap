@@ -1,0 +1,106 @@
+md-toolbar:not(.md-menu-toolbar) {
+    background-color: rgb(3,169,244) !important;
+    color: rgba(0,0,0,0.87);
+}
+
+.usa { 
+  color: white;
+  background-image: url(../img/usa.jpg);
+  background-repeat: no-repeat;  
+  background-position: 0% 10%;
+  background-size: 100% 100%;
+}
+
+
+.logo {
+  width: 55px;
+  height: 55px;
+  background-image: url(../img/owl.png);
+  background-repeat: no-repeat;  
+  background-position: 0% 10%;
+  background-size: 100% 100%;
+  
+}
+
+h7 {
+  color: white;
+}
+
+#topToolbar h1 {
+  font-size: 1.5em;
+  margin-left: 100px;
+}
+
+#topPanel .md-button {
+ margin: 10px;
+ border-width:2px; 
+ border-radius: 7px;
+ border-width: 4px;
+ border-style: solid;
+ border-color: darkslategray
+}
+
+#topPanel {
+    background-color: bisque;
+    margin-left: 150px;
+    margin-top: 10px;
+    height: 80px;
+    width: 500px;
+    position: absolute;
+    opacity: 0.9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px grey; 
+    z-index: 5000; 
+} 
+
+
+
+div.vis-network-tooltip {
+    position: absolute;
+    visibility: hidden;
+    padding: 5px;
+    white-space: nowrap;
+    font-family: verdana;
+    font-size: 14px;
+    color: #000000;
+    background-color: #f5f4ed;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #808074;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+#node-popUp {
+  display:none;
+  position:absolute;
+  top:350px;
+  left:170px;
+  z-index:299;
+  width:250px;
+  height:120px;
+  background-color: #f9f9f9;
+  border-style:solid;
+  border-width:3px;
+  border-color: #5394ed;
+  padding:10px;
+  text-align: center;
+}
+
+#edge-popUp {
+  display:none;
+  position:absolute;
+  top:350px;
+  left:170px;
+  z-index:299;
+  width:150px;
+  height:90px;
+  background-color: #f9f9f9;
+  border-style:solid;
+  border-width:3px;
+  border-color: #5394ed;
+  padding:10px;
+  text-align: center;
+}
+  

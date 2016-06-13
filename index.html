@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<!-- User CSS goes here -->
+<head>
+    <link rel="stylesheet" href="css/angular-material.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />  
+    <link rel="stylesheet" href="css/graph.css" />
+    <link rel="stylesheet" href="css/vis.css" />
+    
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-animate.min.js"></script>
+    <script type="text/javascript" src="js/angular-aria.min.js"></script>
+    <script type="text/javascript" src="js/angular-messages.min.js"></script>
+    <script type="text/javascript" src="js/angular-material.min.js"></script>
+    <script type="text/javascript" src="js/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.min.js"></script>           
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>    
+        
+    
+    <script type="text/javascript" src="js/vis.js"></script>
+    <script type="text/javascript" src="js/vzCtrl.js"></script>
+    <script type="text/javascript" src="js/vzDirective.js"></script>            
+</head>
+
+<body style="background-color:#004444"> 
+<div layout="column" layout-align="center" ng-app="vzApp" ng-controller="vzCtrl"  id="map">
+    <div layout="row" layout-align="center center">
+      <div style="background-color:#004444;height: 2vh;" flex="90">
+      </div>  
+    </div>
+    <div layout="row" layout-align="center center" id="topToolbar">
+        <div style="height: 64px;" flex="90">
+            <md-toolbar>
+			<div class="md-toolbar-tools">
+                <div  class="logo"></div>
+				<h1>Open Network Operating System</h1>
+			</div>
+            </md-toolbar>
+        </div>
+    </div>
+    <div id="topPanel" drag layout="column" class="md-raised" layout-align="center center" >
+        <div flex="170" >
+            <md-button class="md-raised" style="background-color: blue;">
+                <h7>10.128.2.1</h7><br>
+                <h7># Switches: 15</h7>
+            </md-button>
+            <md-button class="md-raised" style="background-color: brown">
+                <h7>10.128.2.2</h7><br>
+                <h7># Switches: 2</h7>
+            </md-button>
+            <md-button class="md-raised" style="background-color: orange">
+                <h7>10.128.2.3</h7><br>
+                <h7># Switches: 8</h7>
+            </md-button>          
+        </div>
+    </div>
+
+    <div layout="row" layout-align="center center">
+      <vz-network ng-model="network_data" options="network_options" on-select="onNodeSelect" id="previewNetwork" style="height: 85vh;"  flex="90" class="usa">
+      </vz-network>
+    </div>
+    
+    <div id="node-popUp">
+        <span id="operation">Node Details</span> <br>
+        <table style="margin:auto;"><tr>
+        <td>Node Id</td><td><input id="node-id" value=""></td>
+        </tr>
+        <tr>
+            <td>Edges</td><td><input id="edge-id" value=""> </td>
+        </tr></table>
+        <input type="button" value="Ok" id="cancelButton" onclick="$('#node-popUp').hide()"></button>
+    </div>
+    
+    <div id="edge-popUp">
+        <div id="edge-menu">
+          <md-menu >
+          <md-menu-content width="6">
+            <md-menu-item >
+              <md-button onclick="$('#edge-popUp #edge-info').show();$('#edge-popUp #edge-menu').hide();"> <span md-menu-align-target>Link details</span> {{item}} </md-button>
+            </md-menu-item>
+            <md-menu-item >
+              <md-button onclick="$('#edge-popUp').hide()"> <span md-menu-align-target>Explore link</span> {{item}} </md-button>
+            </md-menu-item>            
+          </md-menu-content>
+          </md-menu>
+        </div>
+        <div id="edge-info">
+            <span id="operation">Edge Details</span> <br>
+            <table style="margin:auto;">
+            <tr>
+                <td>Edges</td><td><input id="edge-id" value="" style="width: 40px"> </td>
+            </tr></table>
+            <input type="button" value="Ok" id="cancelButton" onclick="$('#edge-popUp').hide()"></button>
+        </div>        
+    </div>    
+</div>
+
+<script type="text/javascript">
+    //$(document).ready(function() { 
+    //    drawNodes();
+    //}); 
+</script>
+
+</body>
+</html>	
