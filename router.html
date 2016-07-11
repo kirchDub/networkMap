@@ -1,0 +1,34 @@
+<HTML>
+<HEAD>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+<script language="javascript" type="text/javascript">
+
+function popitup(url) {
+	var p1 = 'scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no'
+	var p2 = 'width=100,height=100,left=100,top=100';
+	window.open('/', 'test', p1+p2)
+
+}
+
+</script>
+</HEAD>
+<body>
+<!-- coords="x1,y1,x2,y2" -->
+<img src="../images/router.jpg" width="1300px" height="500px" alt="alttext" usemap="#mapname">
+<map name="mapname"  style="background-color: red;">
+	<area shape="rect" coords="90,290,105,310" href="javascript:alert('Port 8081')"  style="background-color: red;">
+	<area shape="rect" coords="113,290,128,310" href="javascript:alert('Port 8082');"  style="background-color: red;">
+	<area shape="rect" coords="213,290,228,310" href="javascript:alert('Port 8083');"  style="background-color: red;">		
+	<area shape="rect" coords="235,290,250,310" href="javascript:alert('Port 8084');"  style="background-color: red;">
+</map>
+  
+  <div data-role="popup" id="myPopup">
+    <p>This is a simple popup.</p>
+  </div>
+
+</body>
+</HTML>
